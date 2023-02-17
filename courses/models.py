@@ -4,4 +4,4 @@ from django.db import models
 class Course(models.Model):
     name = models.CharField(max_length=255)
     preview = models.ImageField(upload_to='courses/previews', null=True)
-    description = models.TextField()
+    description = models.TextField(null=True)

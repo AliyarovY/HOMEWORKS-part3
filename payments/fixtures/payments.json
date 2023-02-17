@@ -1,0 +1,13 @@
+[
+  {
+    "model": "payments.Payment",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "paid_course": 1,
+      "paid_lesson": 1,
+      "amount": 355,
+      "is_cash": true
+    }
+  }
+]

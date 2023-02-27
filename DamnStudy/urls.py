@@ -20,6 +20,7 @@ urlpatterns = [
     path('api/v1/', include(course_router.urls)),
     path('api/v1/lessons/', include('lessons.urls')),
     path('api/v1/', include(user_router.urls)),
+    path('api/v1/sub/', include('subscriptions.urls')),
 
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),

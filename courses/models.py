@@ -7,3 +7,6 @@ class Course(models.Model):
     preview = models.ImageField(upload_to='courses/previews', null=True)
     description = models.TextField(null=True)
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+
+    def __str__(self):
+        return self.name

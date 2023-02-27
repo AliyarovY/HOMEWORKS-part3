@@ -13,7 +13,6 @@ class ListLesson(generics.ListAPIView):
 
     def get_queryset(self):
         return moderator_queryset(Lesson, self.request.user)
-        return Lesson.objects.all()
 
 
 class RetrieveLesson(generics.RetrieveAPIView):

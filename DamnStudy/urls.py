@@ -38,6 +38,7 @@ urlpatterns = [
     path('api/lessons/', include('lessons.urls')),
     path('api/', include(user_router.urls)),
     path('api/', include('subscriptions.urls')),
+    path('api/payments', include('payments.urls'))
 
     re_path(r'^swagger(?P<format>\.json|\.yaml)$', schema_view.without_ui(cache_timeout=0), name='schema-json'),
     re_path(r'^swagger/$', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),

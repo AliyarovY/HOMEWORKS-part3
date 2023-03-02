@@ -12,18 +12,17 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 from datetime import timedelta
+from dotenv import load_dotenv
+import os
 
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
+env_path = BASE_DIR / '.env'
+load_dotenv(dotenv_path=env_path)
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-co&ox-(*qn&q)^#^hxideh6--4#ukxq7%e@seb6o$wk4v)28*#'
+SECRET_KEY =os.getenv('SECRET_KEY')
 
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
@@ -40,6 +39,8 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'rest_framework_simplejwt',
+    'rest_framework_swagger',
+    'drf_yasg',
 
     'users',
     'courses',
@@ -181,7 +182,7 @@ REST_FRAMEWORK = {
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
 
-    'DEFAULT_PERMISSON_CLASSES':(
+    'DEFAULT_PERMISSON_CLASSES': (
         'rest_framework_.permissions.IsAuthenticated'
     )
 

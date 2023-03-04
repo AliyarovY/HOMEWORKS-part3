@@ -1,5 +1,5 @@
 """
-ASGI config for DamnStudy project.
+ASGI DamnStudy for DamnStudy project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 

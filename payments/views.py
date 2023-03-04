@@ -2,7 +2,6 @@ from requests import Response
 from rest_framework.views import APIView
 
 from .serializers import PaymentSerializer
-from .models import Payment
 from .services import yookassa_pay
 
 

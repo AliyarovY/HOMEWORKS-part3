@@ -17,4 +17,8 @@ class Payment(models.Model):
     amount = models.PositiveIntegerField()
     is_cash = models.BooleanField()
     is_success = models.BooleanField()
-    paymentType = models.CharField(max_length=2, choices=PAYMENT_TYPE_CHOICES, default='PC')
+    paymentType = models.CharField(
+        max_length=2,
+        choices=PAYMENT_TYPE_CHOICES,
+        default='PC',
+    )

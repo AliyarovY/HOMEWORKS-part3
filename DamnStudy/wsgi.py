@@ -1,5 +1,5 @@
 """
-WSGI config for DamnStudy project.
+WSGI DamnStudy for DamnStudy project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
